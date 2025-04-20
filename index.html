@@ -3,16 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FLAVOURSOME | Home</title>
+    <title>THE MANGO COUNTY | Home</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* Additional styles just for the homepage */
+        .video-section {
+            width: 100%;
+            height: 70vh;
+            min-height: 400px;
+            background: #000;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
         .ambiance-gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 0; /* Remove gaps between images */
+            gap: 0;
         }
-        
+
         .ambiance-photo {
             width: 100%;
             height: 100vh;
@@ -20,21 +36,41 @@
             object-fit: cover;
             transition: transform 0.5s ease;
         }
-        
+
         .ambiance-photo:hover {
             transform: scale(1.03);
         }
-        
-        /* Remove the hero section completely */
-        .hero {
-            display: none;
+
+        footer {
+            background: #111;
+            color: #f5f5f5;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+    
+
+        .copyright {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #333;
         }
     </style>
 </head>
 <body>
     <header>
         <div class="nav-container">
-            <a href="index.html" class="logo"> FLAVOURSOME </a>
+            <a href="index.html" class="logo-btn">THE MANGO COUNTY</a>
             <nav>
                 <div class="menu-toggle">
                     <i class="fas fa-bars"></i>
@@ -49,43 +85,111 @@
             </nav>
         </div>
     </header>
-
+    
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        video{
+            width: 30%;
+            length:30%;
+        }
+        </style>
+        
     <main>
-        <!-- Ambiance Photo Gallery -->
+        <!-- <div class="video-section">
+            <video class="hero-video" autoplay muted loop playsinline>
+                <source src="restaurant-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div> -->
+
         <div class="ambiance-gallery">
             <img src="ambiance1.jpg" alt="Restaurant interior" class="ambiance-photo">
             <img src="ambiance2.jpg" alt="Dining area" class="ambiance-photo">
             <img src="ambiance3.jpg" alt="Bar section" class="ambiance-photo">
-            <img src="ambiance4.jpg" alt="Outdoor seating" class="ambiance-photo">
-            <img src="ambiance5.jpg" alt="Chef preparing food" class="ambiance-photo">
-            <!-- <img src="ambiance6.jpg" alt="Signature dish" class="ambiance-photo"> -->
+            <img src="ambiance4.jpg" alt="Restaurant interior" class="ambiance-photo">
+            <img src="ambiance5.jpg" alt="Dining area" class="ambiance-photo">
+            <img src="ambiance6.jpg" alt="Bar section" class="ambiance-photo">
+            </div>
+            <video loop="" controls="" src="video.mp4"></video>
+            <div class="ambiance-gallery">
+            
+            <img src="ambiance7.jpg" alt="Restaurant interior" class="ambiance-photo">
+            <img src="ambiance8.jpg" alt="Dining area" class="ambiance-photo">
+            <img src="ambiance9.jpg" alt="Bar section" class="ambiance-photo">
+            <img src="ambiance10.jpg" alt="Bar section" class="ambiance-photo">
+            <img src="ambiance12.jpg" alt="Bar section" class="ambiance-photo">
+            <img src="ambiance11.jpg" alt="Bar section" class="ambiance-photo">
+            
+            
         </div>
     </main>
 
     <footer>
         <div class="footer-grid">
             <div class="footer-section">
-                <h3>Contact</h3>
-                <p>White House</p>
-                <p>Phone: 9898989898</p>
-                <p>Email: contact@flavousome.com</p>
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> White House, Food Street</p>
+                <p><i class="fas fa-phone"></i> 9898989898</p>
+                <p><i class="fas fa-envelope"></i> contact@THE MANGO COUNTY.com</p>
             </div>
+
             <div class="footer-section">
-                <h3>Hours</h3>
-                <p>Mon-Fri: 11am-10pm</p>
-                <p>Sat-Sun: 10am-11pm</p>
+                <h3>Opening Hours</h3>
+                <p><i class="far fa-clock"></i> Monday-Friday: 11am - 10pm</p>
+                <p><i class="far fa-clock"></i> Saturday-Sunday: 10am - 11pm</p>
             </div>
+
             <div class="footer-section">
                 <h3>Follow Us</h3>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
+                <div class="social-buttons">
+                  <a href="https://www.instagram.com/themango.county?igsh=bzQzbWt2cWF0dHQ2" class="social-btn" target="_blank">
+                    <i class="fab fa-instagram"></i> Instagram
+                  </a>
+                  
                 </div>
-            </div>
+              </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 THE MANGO COUNTY. All rights reserved.</p>
+            <p>Designed with <i class="fas fa-heart" style="color:#d4af37;"></i> for food lovers</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const video = document.querySelector('.hero-video');
+
+            video.play().catch(error => {
+                console.log("Autoplay prevented, showing controls");
+                video.controls = true;
+
+                if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+                    const playButton = document.createElement('div');
+                    playButton.innerHTML = `
+                        <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+                                   background:rgba(212,175,55,0.8); color:#1c1c1c; padding:1rem 2rem;
+                                   border-radius:5px; cursor:pointer; font-weight:bold;">
+                            Tap to Play Video
+                        </div>`;
+                    playButton.onclick = () => {
+                        video.play();
+                        playButton.style.display = 'none';
+                    };
+                    video.parentNode.appendChild(playButton);
+                }
+            });
+
+            document.querySelectorAll('.ambiance-photo').forEach(img => {
+                img.onerror = () => {
+                    console.warn("Failed to load image:", img.src);
+                    img.style.display = 'none';
+                };
+            });
+        });
+    </script>
 </body>
 </html>
