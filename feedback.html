@@ -3,41 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feedback | FLAVOURSOME</title>
+    <title>Feedback | THE MANGO COUNTY</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* ONLY ADDED THESE ALIGNMENT FIXES */
-        .feedback-form {
-            max-width: 500px;
-            margin: 0 auto;
+        /* FORM STYLING */
+        .feedback-container {
+            max-width: 450px;
+            margin: 40px auto;
+            padding: 30px;
+            background: #333;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
         }
         
-        .form-group {
-            margin-bottom: 25px;
+        .form-row {
+            margin-bottom: 1.5rem;
+            text-align: left;
         }
         
-        .form-group label {
+        .form-row label {
             display: block;
-            margin-bottom: 8px;
+            margin-bottom: 0.5rem;
+            color: #d4af37;
+            font-weight: bold;
         }
         
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
+        .form-row input,
+        .form-row select,
+        .form-row textarea {
             width: 100%;
-            padding: 10px;
-            box-sizing: border-box;
+            padding: 12px;
+            border: none;
+            border-radius: 20px;
+            background: #222;
+            color: #f5f5f5;
         }
         
         textarea {
-            height: 120px;
+            height: 150px;
+            resize: vertical;
+        }
+        
+        .btn-submit {
+            width: 100%;
+            padding: 14px;
+            background: #d4af37;
+            color: #1c1c1c;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .btn-submit:hover {
+            background: #b8972c;
+        }
+        
+        /* LOGO BUTTON */
+        .logo-btn {
+            font-size: 1.8rem;
+            color: #d4af37;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            background: #222;
+            border-radius: 5px;
+            transition: all 0.3s;
+            margin-right: auto;
+            display: inline-block;
         }
     </style>
 </head>
 <body>
     <header>
         <div class="nav-container">
-            <a href="index.html" class="logo">FLAVOURSOME</a>
+            <a href="index.html" class="logo-btn">THE MANGO COUNTY</a>
             <nav>
                 <div class="menu-toggle">
                     <i class="fas fa-bars"></i>
@@ -54,24 +95,24 @@
     </header>
 
     <main>
-        <section class="feedback-form">
+        <div class="feedback-container">
             <h2>We Value Your Feedback</h2>
             <p>Please share your dining experience with us</p>
             
-            <form id="feedbackForm" novalidate>
-                <div class="form-group">
+            <form action="feedback-success.html" method="POST" onsubmit="redirectToSuccess(event)">
+                <div class="form-row">
                     <label for="name">Your Name</label>
                     <input type="text" id="name" name="name" required>
                 </div>
                 
-                <div class="form-group">
+                <div class="form-row">
                     <label for="email">Email Address</label>
                     <input type="email" id="email" name="email" required>
                 </div>
                 
-                <div class="form-group">
+                <div class="form-row">
                     <label for="rating">Rating</label>
-                    <select id="rating" name="rating" class="form-control" required>
+                    <select id="rating" name="rating" required>
                         <option value="">Select your rating</option>
                         <option value="5">Excellent</option>
                         <option value="4">Very Good</option>
@@ -81,23 +122,23 @@
                     </select>
                 </div>
                 
-                <div class="form-group">
+                <div class="form-row">
                     <label for="message">Your Feedback</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <textarea id="message" name="message" required></textarea>
                 </div>
                 
-                <button type="submit" class="btn">Submit Feedback</button>
+                <button type="submit" class="btn-submit">Submit Feedback</button>
             </form>
-        </section>
+        </div>
     </main>
 
     <footer>
         <div class="footer-grid">
             <div class="footer-section">
-                <h3>Contact FLAVOURSOME</h3>
+                <h3>Contact THE MANGO COUNTY</h3>
                 <p>White House</p>
                 <p>Phone: 9898989898</p>
-                <p>Email: contact@flavoursome.com</p>
+                <p>Email: contact@THEMANGOCOUNTY.com</p>
             </div>
             <div class="footer-section">
                 <h3>Opening Hours</h3>
@@ -106,27 +147,39 @@
             </div>
             <div class="footer-section">
                 <h3>Follow Us</h3>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
+                <div class="social-buttons">
+                  <a href="https://www.instagram.com/themango.county?igsh=bzQzbWt2cWF0dHQ2" class="social-btn" target="_blank">
+                    <i class="fab fa-instagram"></i> Instagram
+                  </a>
                 </div>
-            </div>
+              </div>
         </div>
         <div class="copyright">
-            <p>&copy; 2024 FLAVOURSOME. All rights reserved.</p>
+            <p>&copy; 2024 THE MANGO COUNTY. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Success Modal -->
-    <div id="successModal" class="modal">
-        <div class="modal-content">
-            <h2>Thank You!</h2>
-            <p>Your feedback has been submitted successfully.</p>
-            <button class="modal-close" id="modalClose">Close</button>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
+    <script>
+        function redirectToSuccess(e) {
+            e.preventDefault();
+    
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const rating = document.getElementById("rating").value;
+            const message = document.getElementById("message").value.trim();
+    
+            if (name && email && rating && message) {
+                window.location.href = "feedback-success.html";
+            } else {
+                alert("Please fill all fields before submitting.");
+            }
+        }
+    
+        // Mobile menu toggle
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
+    </script>
+    
 </body>
 </html>
