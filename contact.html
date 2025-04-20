@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | THE MANGO COUNTY</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .contact-container {
+            max-width: 500px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: #333;
+            border-radius: 10px;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group input, 
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            background: #222;
+            border: none;
+            color: #f5f5f5;
+            border-radius: 5px;
+        }
+        textarea {
+            height: 150px;
+            resize: vertical;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo-btn">THE MANGO COUNTY</a>
+            <!-- Rest of your header -->
+        </div>
+    </header>
+
+    <main>
+        <div class="contact-container">
+            <h2>Contact THE MANGO COUNTY</h2>
+            <form action="contact-success.html" method="POST">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+            <div class="social-buttons">
+              <a href="https://www.instagram.com/themango.county?igsh=bzQzbWt2cWF0dHQ2" class="social-btn" target="_blank">
+                <i class="fab fa-instagram"></i> Instagram
+              </a>
+            </div>
+          </div>
+    </div>
+        <!-- Your footer with social icons -->
+    </footer>
+</body>
+</html>
