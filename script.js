@@ -43,3 +43,8 @@ if (modalClose) {
     document.querySelector('.modal').style.display = 'none';
   });
 }
+
+function redirectToReserve(event) {
+  event.preventDefault();
+  window.location.href = "contact-success.html";
+}
