@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pre-Reservation | FLAVOURSOME</title>
+    <title>Pre-Reservation | THE MANGO COUNTY</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         .reservation-form {
-            max-width: 500px;
+            max-width: 450px;
             margin: 40px auto;
             padding: 30px;
             background: #333;
@@ -25,17 +26,22 @@
             font-weight: bold;
             color: #d4af37;
         }
-        
-        .form-group input,
-        .form-group select {
-            width: 100%;
-            padding: 12px 15px;
+        .reservation-form label {
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: left; /* Labels left-aligned */
+  }
+  
+        .reservation-form input {
+            padding: 10px;
+            margin-top: 5px;
             border: none;
-            border-radius: 5px;
+            border-radius: 20px;
             background: #222;
             color: #f5f5f5;
-            font-size: 16px;
-        }
+            width: 100%; /* ✅ Full width inside container */
+  }
+  
         
         button[type="submit"] {
             width: 100%;
@@ -59,7 +65,7 @@
 <body>
     <header>
         <div class="nav-container">
-            <a href="index.html" class="logo">FLAVOURSOME</a>
+            <a href="index.html" class="logo-btn">THE MANGO COUNTY</a>
             <nav>
                 <div class="menu-toggle">
                     <i class="fas fa-bars"></i>
@@ -77,8 +83,8 @@
 
     <main>
         <section class="reservation-form">
-            <h2>Reserve Your Table at FLAVOURSOME</h2>
-            <form action="reserve_table.php" method="POST">
+            <h2>Reserve Your Table at THE MANGO COUNTY</h2>
+            <form onsubmit="redirectToReserve(event)">
                 <div class="form-group">
                     <label for="name">Full Name:</label>
                     <input type="text" id="name" name="name" required>
@@ -117,30 +123,34 @@
     <footer>
         <div class="footer-grid">
             <div class="footer-section">
-                <h3>Contact FLAVOURSOME</h3>
+                <h3>Contact THE MANGO COUNTY</h3>
                 <p>123 Gourmet Street</p>
                 <p>Phone: (555) 123-4567</p>
-                <p>Email: reservations@flavoursome.com</p>
+                <p>Email: reservations@THE MANGO COUNTY.com</p>
             </div>
             <div class="footer-section">
                 <h3>Opening Hours</h3>
                 <p>Monday-Friday: 11am - 10pm</p>
                 <p>Saturday-Sunday: 10am - 11pm</p>
             </div>
+            
             <div class="footer-section">
                 <h3>Follow Us</h3>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-tripadvisor"></i></a>
+                <div class="social-buttons">
+                  <a href="https://www.instagram.com/themango.county?igsh=bzQzbWt2cWF0dHQ2" class="social-btn" target="_blank">
+                    <i class="fab fa-instagram"></i> Instagram
+                  </a>
+                  
                 </div>
-            </div>
-        </div>
+              </div>
+              
+    </div>
         <div class="copyright">
-            <p>&copy; 2024 FLAVOURSOME. All rights reserved.</p>
+            <p>&copy; 2024 THE MANGO COUNTY. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js">
+    </script>
 </body>
 </html>
