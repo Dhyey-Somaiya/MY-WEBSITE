@@ -142,7 +142,7 @@ body {
   }
   
   
-  /* ===== ORIGINAL STYLES (PRESERVED) ===== */
+  ===== ORIGINAL STYLES (PRESERVED) =====
   .btn {
     margin-top: 15px;
     padding: 10px;
@@ -158,17 +158,8 @@ body {
     background: #b8972c;
   }
   
-  /* ===== RESPONSIVE FIXES ===== */
-  @media (max-width: 768px) {
-    nav ul {
-      flex-direction: column;
-    }
-    
-    .menu-item {
-      width: 100%;
-      max-width: 350px;
-    }
-  }
+ 
+  
   /* ===== Logo as Button ===== */
 .logo-btn {
   font-size: 1.8rem;
@@ -181,21 +172,7 @@ body {
   margin-right: auto; /* Forces left alignment */
 }
 
-/* ===== Homepage Image Grid ===== */
-.ambiance-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-  padding: 1rem;
-}
 
-.ambiance-photo {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 8px;
-  border: 2px solid #d4af37;
-}
 
 /* ===== About Page Image Fix ===== */
 .team img {
@@ -244,4 +221,132 @@ body {
   background-color: #b8972c;
   color: #fff;
 }
+/* ===== Premium Gallery Styling ===== */
+.ambiance-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  padding: 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  background: #1a1a1a;
+  border-radius: 20px;
+  margin: 2rem auto;
+}
 
+.ambiance-photo {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border: 4px solid #d4af37; /* Golden border */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+  background: #000;
+  overflow: hidden;
+}
+
+.ambiance-photo:hover {
+  transform: scale(1.03) translateY(-5px);
+  box-shadow: 0 12px 30px rgba(212, 175, 55, 0.2);
+  border-color: #f0d15b; /* Lighter gold on hover */
+  z-index: 2;
+}
+
+.ambiance-photo::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid rgba(212, 175, 55, 0.3);
+  border-radius: 10px;
+  pointer-events: none;
+}
+
+video {
+  width: 100%;
+  height: auto;
+  margin: 3rem 0;
+  border-radius: 15px;
+  border: 3px solid #d4af37;
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.15);
+  background: #000;
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+  .ambiance-gallery {
+      gap: 1.5rem;
+      padding: 1.5rem;
+      border-radius: 15px;
+  }
+  
+  .ambiance-photo {
+      height: 280px;
+      border-width: 3px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ambiance-gallery {
+      grid-template-columns: 1fr;
+      padding: 1rem;
+  }
+}
+
+/* ===== Tightened Spacing ===== */
+.ambiance-gallery {
+  padding: 1.5rem !important;
+  margin: 1rem auto !important;
+  grid-gap: 1.2rem !important;
+}
+
+.ambiance-photo {
+  height: 320px !important;
+  margin: 0 !important;
+}
+
+video {
+  margin: 2rem 0 !important;
+  border-radius: 12px !important;
+}
+
+/* Mobile Fixes */
+@media (max-width: 768px) {
+  .ambiance-gallery {
+      padding: 1rem !important;
+      grid-gap: 0.8rem !important;
+  }
+  
+  .ambiance-photo {
+      height: 240px !important;
+  }
+  
+  video {
+      margin: 1.5rem 0 !important;
+  }
+}
+
+/* Remove default spacing */
+main {
+  padding: 0 !important;
+}
+
+/* ===== Video Size Fix ===== */
+video {
+  width: 500px;
+  margin: 2rem auto !important; /* Centered */
+  display: block;
+  max-width: 600px; /* Maximum size limit */
+  height:600px;
+}
+
+/* Mobile Video Adjustment */
+@media (max-width: 768px) {
+  video {
+      width: 80% !important;
+  }
+}
