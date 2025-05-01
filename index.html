@@ -71,40 +71,23 @@
     <header>
         <div class="nav-container">
             <a href="index.html" class="logo-btn">THE MANGO COUNTY</a>
+            
             <nav>
-                <div class="menu-toggle">
-                    <i class="fas fa-bars"></i>
-                </div>
                 <ul class="nav-menu">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="about.html" class="nav-link">About</a></li>
-                    <li><a href="menu.html" class="nav-link">Menu</a></li>
-                    <li><a href="pre-reservation.html" class="nav-link">Reservations</a></li>
-                    <li><a href="feedback.html" class="nav-link">Feedback</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="pre-reservation.html">Reservations</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        video{
-            width: 30%;
-            length:30%;
-        }
-        </style>
+    
         
     <main>
-        <!-- <div class="video-section">
-            <video class="hero-video" autoplay muted loop playsinline>
-                <source src="restaurant-video.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div> -->
+       
 
         <div class="ambiance-gallery">
             <img src="ambiance1.jpg" alt="Restaurant interior" class="ambiance-photo">
@@ -163,37 +146,6 @@
         </div>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const video = document.querySelector('.hero-video');
-
-            video.play().catch(error => {
-                console.log("Autoplay prevented, showing controls");
-                video.controls = true;
-
-                if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-                    const playButton = document.createElement('div');
-                    playButton.innerHTML = `
-                        <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
-                                   background:rgba(212,175,55,0.8); color:#1c1c1c; padding:1rem 2rem;
-                                   border-radius:5px; cursor:pointer; font-weight:bold;">
-                            Tap to Play Video
-                        </div>`;
-                    playButton.onclick = () => {
-                        video.play();
-                        playButton.style.display = 'none';
-                    };
-                    video.parentNode.appendChild(playButton);
-                }
-            });
-
-            document.querySelectorAll('.ambiance-photo').forEach(img => {
-                img.onerror = () => {
-                    console.warn("Failed to load image:", img.src);
-                    img.style.display = 'none';
-                };
-            });
-        });
-    </script>
+    
 </body>
 </html>
