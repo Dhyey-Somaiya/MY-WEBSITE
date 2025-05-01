@@ -80,9 +80,7 @@
         <div class="nav-container">
             <a href="index.html" class="logo-btn">THE MANGO COUNTY</a>
             <nav>
-                <div class="menu-toggle">
-                    <i class="fas fa-bars"></i>
-                </div>
+               
                 <ul class="nav-menu">
                     <li><a href="index.html" class="nav-link">Home</a></li>
                     <li><a href="about.html" class="nav-link">About</a></li>
@@ -99,7 +97,7 @@
             <h2>We Value Your Feedback</h2>
             <p>Please share your dining experience with us</p>
             
-            <form action="feedback-success.html" method="POST" onsubmit="redirectToSuccess(event)">
+            <form action="feedback-success.html" method="GET">
                 <div class="form-row">
                     <label for="name">Your Name</label>
                     <input type="text" id="name" name="name" required>
@@ -159,27 +157,7 @@
         </div>
     </footer>
 
-    <script>
-        function redirectToSuccess(e) {
-            e.preventDefault();
-    
-            const name = document.getElementById("name").value.trim();
-            const email = document.getElementById("email").value.trim();
-            const rating = document.getElementById("rating").value;
-            const message = document.getElementById("message").value.trim();
-    
-            if (name && email && rating && message) {
-                window.location.href = "feedback-success.html";
-            } else {
-                alert("Please fill all fields before submitting.");
-            }
-        }
-    
-        // Mobile menu toggle
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            document.querySelector('.nav-menu').classList.toggle('active');
-        });
-    </script>
+   
     
 </body>
 </html>
